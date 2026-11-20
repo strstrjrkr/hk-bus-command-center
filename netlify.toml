@@ -3,6 +3,10 @@
   command = "npm run build"
   functions = "netlify/functions"
 
+[build.environment]
+  NODE_ENV = "development"
+  NPM_FLAGS = "--include=dev"
+
 [dev]
   command = "npm run dev"
   port = 8888
@@ -10,29 +14,30 @@
   publish = "dist"
   autoLaunch = false
 
-[context.production.environment]
-  NODE_ENV = "production"
-  VITE_API_BASE = "/.netlify/functions"
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
 
-[context.deploy-preview.environment]
-  NODE_ENV = "staging"
-  VITE_API_BASE = "/.netlify/functions"
-
+# Proxy rules for API endpoints
 [[redirects]]
   from = "/api/kmb/*"
-  to = "/.netlify/functions/kmb-proxy/:splat"
+  to = "/.netlify/functions/kmb-proxy"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/api/ctb/*"
-  to = "/.netlify/functions/ctb-proxy/:splat"
+  to = "/.netlify/functions/ctb-proxy"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/api/td/*"
-  to = "/.netlify/functions/td-traffic/:splat"
+  to = "/.netlify/functions/td-traffic"
   status = 200
+  force = true
 
+# SPA client-side router fallback
 [[redirects]]
   from = "/*"
   to = "/index.html"
