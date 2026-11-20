@@ -1,14 +1,8 @@
-# ==========================================
-# 1. BUILD SETTINGS
-# ==========================================
 [build]
   publish = "dist"
   command = "npm run build"
   functions = "netlify/functions"
 
-# ==========================================
-# 2. LOCAL DEVELOPMENT OVERRIDES
-# ==========================================
 [dev]
   command = "npm run dev"
   port = 8888
@@ -16,9 +10,6 @@
   publish = "dist"
   autoLaunch = false
 
-# ==========================================
-# 3. PRODUCTION & BRANCH BUILD CONTEXTS
-# ==========================================
 [context.production.environment]
   NODE_ENV = "production"
   VITE_API_BASE = "/.netlify/functions"
@@ -26,10 +17,6 @@
 [context.deploy-preview.environment]
   NODE_ENV = "staging"
   VITE_API_BASE = "/.netlify/functions"
-
-# ==========================================
-# 4. REDIRECTS & API PROXY REWRITES
-# ==========================================
 
 [[redirects]]
   from = "/api/kmb/*"
@@ -51,9 +38,6 @@
   to = "/index.html"
   status = 200
 
-# ==========================================
-# 5. SECURITY & PERFORMANCE HEADERS
-# ==========================================
 [[headers]]
   for = "/*"
   [headers.values]
