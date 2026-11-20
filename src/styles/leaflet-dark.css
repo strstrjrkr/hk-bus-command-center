@@ -1,0 +1,25 @@
+/* High-contrast tactical dark basemap filters */
+.leaflet-container {
+  background: #020617 !important;
+}
+
+.leaflet-tile-pane {
+  filter: brightness(0.85) invert(1) contrast(3.5) hue-rotate(200deg) saturate(0.25) brightness(0.7);
+}
+
+.leaflet-control-zoom a {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+  border: 1px solid #1e293b !important;
+}
+
+.leaflet-control-attribution {
+  background: rgba(2, 6, 23, 0.8) !important;
+  color: #64748b !important;
+  font-size: 10px !important;
+}
+
+.bus-marker-container {
+  background: transparent;
+  border: none;
+}

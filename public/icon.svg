@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <rect width="512" height="512" rx="108" fill="#020617"/>
+  <!-- Radar circles -->
+  <circle cx="256" cy="256" r="210" fill="none" stroke="#1e293b" stroke-width="4"/>
+  <circle cx="256" cy="256" r="140" fill="none" stroke="#1e293b" stroke-width="4"/>
+  <circle cx="256" cy="256" r="70" fill="none" stroke="#1e293b" stroke-width="4"/>
+  <!-- Radar sweep line -->
+  <line x1="256" y1="256" x2="400" y2="112" stroke="#f59e0b" stroke-width="6" stroke-linecap="round"/>
+  <!-- Bus chassis silhouette -->
+  <rect x="176" y="140" width="160" height="232" rx="28" fill="#f59e0b"/>
+  <!-- Upper deck windscreen -->
+  <rect x="196" y="160" width="120" height="48" rx="8" fill="#020617"/>
+  <!-- Lower deck windscreen -->
+  <rect x="196" y="228" width="120" height="56" rx="8" fill="#020617"/>
+  <!-- Headlights -->
+  <circle cx="206" cy="336" r="12" fill="#ffffff"/>
+  <circle cx="306" cy="336" r="12" fill="#ffffff"/>
+</svg>
